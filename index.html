@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huda Saed | ICT Student Portfolio</title>
+  <meta name="description" content="Portfolio of Huda Saed, an Information and Communication Technology student at Frantz Fanon University.">
+  <meta name="theme-color" content="#070b1f">
+  <meta property="og:title" content="Huda Saed | ICT Student">
+  <meta property="og:description" content="ICT student at Frantz Fanon University. Projects in Python, Django and web development.">
+  <meta property="og:image" content="images/IM.jpeg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238b5cf6'/%3E%3Ctext x='32' y='42' font-size='28' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EHS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a href="#home" class="logo" aria-label="Huda Saed, back to top"><b>HS</b><span>Huda Saed</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="menu" aria-label="Main">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
+        <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#certificates">Certificates</a>
+        <a href="#contact" class="btn btn-sm">Contact me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="orb o1"></div><div class="orb o2"></div>
+      <div class="wrap hero-in">
+        <div class="hero-text">
+          <p class="hello"><span class="dot"></span>ICT Student at Frantz Fanon University</p>
+          <h1 data-bind="name">Huda Saed</h1>
+          <p class="role" data-bind="title">ICT Student</p>
+          <p class="lead" data-bind="intro"></p>
+          <div class="actions">
+            <a href="#projects" class="btn">View my projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact me</a>
+            <a id="gh-hero" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <dl class="stats" id="stats"></dl>
+        </div>
+        <div class="avatar">
+          <div class="frame"><div class="photo" id="photo"></div></div>
+          <ul class="chips" id="chips" aria-hidden="true"></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+    <section id="about" class="section">
+      <div class="wrap about">
+        <div class="reveal">
+          <h2>About me</h2>
+          <div id="about-text" class="prose"></div>
+        </div>
+        <div class="reveal about-side">
+          <h3>Interests</h3>
+          <ul class="facts" id="interests"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="wrap narrow">
+        <h2 class="reveal">Education</h2>
+        <ol class="timeline" id="education-list"></ol>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="wrap" id="skills-list"></div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="wrap">
+        <h2 class="reveal">Projects</h2>
+        <p class="sub reveal">Open any project to read the code on GitHub.</p>
+        <div class="grid projects" id="projects-list"></div>
+        <p class="more reveal"><a id="gh-all" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">See all repositories on GitHub</a></p>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+      <div class="wrap">
+        <h2 class="reveal">Certificates</h2>
+        <div class="grid certs" id="certs-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap contact">
+        <div class="reveal">
+          <h2>Contact</h2>
+          <p class="prose">Looking for an intern or a junior team member? Send me a message and I'll reply as soon as I can.</p>
+          <ul class="links" id="contact-links"></ul>
+        </div>
+        <form id="form" class="form reveal" novalidate>
+          <label>Name<input name="name" type="text" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <button class="btn" type="submit">Send message</button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap"><p>&copy; <span id="year"></span> <span data-bind="name">Huda Saed</span>. ICT Student, Frantz Fanon University.</p>
+    <a href="#home">Back to top</a></div>
+  </footer>
+
+  <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <button class="lb-x" id="lb-x" aria-label="Close preview">&times;</button>
+    <figure><img id="lb-img" alt=""><figcaption><a id="lb-open" target="_blank" rel="noopener noreferrer">Open full size</a></figcaption></figure>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
