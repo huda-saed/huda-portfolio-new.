@@ -142,15 +142,22 @@ const SITE = {
     }
   ],
 
-  certificates: [
+ certificates: [
     {
-      title: "Foundations: Data, Data, Everywhere",
-      issuer: "Google, offered through Coursera",
-      date: "14 September 2026",
-      image: "images/certificate-google-data-foundations.jpg",
-      link: ""
+        title: "Foundations: Data, Data, Everywhere",
+        issuer: "Google, offered through Coursera",
+        date: "14 September 2026",
+        image: "images/certificate-google-data-foundations.jpg",
+        link: ""
+    },
+    {
+        title: "My Certificate",
+        issuer: "My Institution",
+        date: "27 November 2026",
+        image: "images/imag.jpeg",
+        link: ""
     }
-  ],
+],
 
   contact: {
     email: "mssdahabozaeth@gmail.com",
